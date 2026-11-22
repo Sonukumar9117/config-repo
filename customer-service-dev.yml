@@ -10,9 +10,14 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3307/cust_dev
     username: root
-    password: Sonu123@
+    password: ${MYSQL_PASSWORD}
 
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+logging:
+  level:
+    org.springframework.cloud.config: DEBUG
+    org.springframework.boot.context.config: DEBUG
